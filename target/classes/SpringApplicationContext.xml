@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+ <!--    REDS-->
+    <bean name="facebook" class="pe.isil.red.Facebook" />
+    <bean name="whatsapp" class="pe.isil.red.Whatsapp" />
+    <bean name="instagran" class="pe.isil.red.Instagran" />
+
+    
+    
+    <bean name="charly" class="pe.isil.user.Charly">
+    
+    
+     <!--inyeccion de dependencias por constructor-->
+<!--        <constructor-arg name="red" ref="instagran" />-->
+
+    
+
+        
+<!--inyeccion de dependencias por setter-->
+        <property name="red" ref="instagran" />
+        
+
+
+        
+
+    </bean>
+
+
+</beans>
